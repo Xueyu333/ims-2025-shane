@@ -1,2 +1,2 @@
 # ims-2025-shane
-[week1](ims_week1)
+[week1_homework](ims_week1)

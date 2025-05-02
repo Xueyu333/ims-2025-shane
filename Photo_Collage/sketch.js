@@ -416,6 +416,11 @@ function draw() {
 
   
 const fillStatus = checkCanvasFillLevel();
+// 先进行清理检查，与调试模式无关
+if (fillStatus.isFull) {
+  // 立即清理旧图片，而不是等待特定帧数
+  removeOldestHalf();
+}
 
 // 显示填充状态
 if (debugMode) {
@@ -427,12 +432,6 @@ if (debugMode) {
   text("Canvas fill: " + Math.round(fillStatus.fillPercentage) + "%", 10, 150);
   text("Crowded regions: " + fillStatus.crowdedRegions + "/10", 10, 170);
   
- // 修改当画布满时的处理逻辑
-if (fillStatus.isFull) {
-  
-  // 立即清理旧图片，而不是等待特定帧数
-  removeOldestHalf();
-}
 }
 
 renderBodyTexts();

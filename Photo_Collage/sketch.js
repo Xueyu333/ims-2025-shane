@@ -329,7 +329,7 @@ function draw() {
   text("Bodies: " + bodies.filter(b => !b.isRemoved).length, 20, height - 20);
   
   // 显示说明
-  fill(255, 128, 0);
+  fill(0, 0, 0);
 
   if (typeof gameFont !== 'undefined' && gameFont) {
     textFont(gameFont);

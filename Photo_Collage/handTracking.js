@@ -109,8 +109,9 @@ function processFingerInteraction() {
         
         // 绘制食指指示器
         push();
-        stroke(0);
-        strokeWeight(3);
+        noStroke();
+        // stroke(0);
+        // strokeWeight(3);
         fill(0, 255, 0);
         ellipse(fingerPosition.x, fingerPosition.y, 30, 30);
         pop();
@@ -138,8 +139,9 @@ function processFingerInteraction() {
         
         // 绘制拇指指示器
         push();
-        stroke(0);
-        strokeWeight(3);
+        noStroke();
+        // stroke(0);
+        // strokeWeight(3);
         fill(0, 200, 255); // 蓝色表示拇指
         ellipse(thumbPosition.x, thumbPosition.y, 30, 30);
         pop();

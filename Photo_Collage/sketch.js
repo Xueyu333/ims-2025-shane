@@ -4,7 +4,7 @@
 let video;
 let bodySegmentation;
 let segmentation;
-let captureInterval = 9000; // 3 seconds between captures
+let captureInterval = 5000; // 3 seconds between captures
 let lastCaptureTime = 0;
 let personPresent = false;
 let personAbsentFrames = 0; // Counter for consecutive frames with no person
@@ -329,7 +329,7 @@ function draw() {
   text("Bodies: " + bodies.filter(b => !b.isRemoved).length, 20, height - 20);
   
   // 显示说明
-  fill(255, 255, 200);
+  fill(255, 128, 0);
 
   if (typeof gameFont !== 'undefined' && gameFont) {
     textFont(gameFont);
@@ -337,7 +337,7 @@ function draw() {
 
   textSize(18);
   textAlign(CENTER);
-  text("Body segments are captured every 3 seconds", width/2, 30);
+  text("Body segments are captured every 5 seconds", width/2, 30);
   text("Pinch and drag images to the top to remove them", width/2, 60);
   text("Move your index finger to interact with objects", width/2, 90);
   

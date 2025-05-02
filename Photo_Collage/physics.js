@@ -130,18 +130,9 @@ function createRectBody(capturedImage, startX, sizeW, sizeH, content) {
     // 返回创建的物体对象
     return bodyObj;
     
-    // // 存储物体及其图像和属性
-    // bodies.push({
-    //   body: body,
-    //   img: capturedImage,
-    //   sizeW: sizeW,
-    //   sizeH: sizeH,
-    //   content: content,
-    //   isRemoved: false
-    // });
     
    
-    // console.log("创建矩形 - 宽: " + sizeW + ", 高: " + sizeH + ", 比例: " + content.aspect);
+   
   }
   
 

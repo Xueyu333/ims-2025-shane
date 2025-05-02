@@ -276,7 +276,7 @@ function gotResults(result) {
    let createdBody;
     
    // 创建物体的轮廓的概率，vertice or rectangle
-   if (contour && random() < 0.5) {
+   if (contour && random() < 0) {
      createdBody = createContourBody(capturedImage, startX, startY, contour, content, scaleFactorW, scaleFactorH);
    } else {
      createdBody = createRectBody(capturedImage, startX, sizeW, sizeH, content);

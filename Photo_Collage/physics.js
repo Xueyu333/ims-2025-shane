@@ -169,7 +169,7 @@ function checkCanvasFillLevel() {
     return {
       fillPercentage: fillPercentage,
       crowdedRegions: crowdedRegions,
-      isFull: fillPercentage > 95 || crowdedRegions >= 8 // 自定义"满"的标准
+      isFull: fillPercentage > 80 || crowdedRegions >= 7 // 自定义"满"的标准
     };
   }
 

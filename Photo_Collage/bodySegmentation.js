@@ -16,23 +16,30 @@ function gotResults(result) {
         }
       }
       
-      personPresent = hasBodyParts;
+     // 检测人物状态变化
+    const wasPresent = personPresent;
+    personPresent = hasBodyParts;
+    
+    // 如果人从存在变为不存在（刚离开画面）
+    if (wasPresent && !personPresent) {
+      console.log("Person left frame, resetting capture timer");
+      // 重置捕获时间，这样当人再次进入时需要重新等待3秒
+      lastCaptureTime = millis(); // 设为当前时间，相当于重新开始计时
+    }
+    
+    if (personPresent) {
+      // Reset the counter if a person is detected
+      personAbsentFrames = 0;
       
-      if (personPresent) {
-        // Reset the counter if a person is detected
-        personAbsentFrames = 0;
-        
-        // Check if it's time to capture a new segment
-        const currentTime = millis();
-        if (currentTime - lastCaptureTime >= captureInterval) {
-          captureBodySegment();
-          lastCaptureTime = currentTime;
-        }
+      // Check if it's time to capture a new segment
+      const currentTime = millis();
+      if (currentTime - lastCaptureTime >= captureInterval) {
+        captureBodySegment();
+        lastCaptureTime = currentTime;
+      }
       } 
     }
   }
-  
-
 
 
 

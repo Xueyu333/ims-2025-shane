@@ -231,7 +231,7 @@ function gotResults(result) {
     const contour = extractSimplifiedContour(segmentation.mask);
     
     // 基于内容计算尺寸
-    const maxSize = min(300, width/8);
+    const maxSize = min(400, width/8);
     let sizeW, sizeH;
     
     if (content.aspect > 1) {

@@ -111,19 +111,37 @@ function createRectBody(capturedImage, startX, sizeW, sizeH, content) {
     
     // 添加至世界
     World.add(world, body);
-    
-    // 存储物体及其图像和属性
-    bodies.push({
+     // 存储物体及其图像和属性
+     const bodyObj = {
       body: body,
       img: capturedImage,
       sizeW: sizeW,
       sizeH: sizeH,
       content: content,
-      isRemoved: false
-    });
+      isRemoved: false,
+      isContour: false, // 添加这个标志以标识是矩形而不是轮廓
+      createdAt: frameCount // 添加创建时间，与轮廓物体保持一致
+    };
+    
+    bodies.push(bodyObj);
+    
+    console.log("创建矩形 - 宽: " + sizeW + ", 高: " + sizeH + ", 比例: " + content.aspect);
+    
+    // 返回创建的物体对象
+    return bodyObj;
+    
+    // // 存储物体及其图像和属性
+    // bodies.push({
+    //   body: body,
+    //   img: capturedImage,
+    //   sizeW: sizeW,
+    //   sizeH: sizeH,
+    //   content: content,
+    //   isRemoved: false
+    // });
     
    
-    console.log("创建矩形 - 宽: " + sizeW + ", 高: " + sizeH + ", 比例: " + content.aspect);
+    // console.log("创建矩形 - 宽: " + sizeW + ", 高: " + sizeH + ", 比例: " + content.aspect);
   }
   
 

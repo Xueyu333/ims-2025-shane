@@ -69,7 +69,7 @@ function preload() {
   bodySegmentation = ml5.bodySegmentation("BodyPix", {
     maskType: "person", //detect entire person as one mask
     outputStride: 16, //Controls the resolution of the internal feature map; lower = higher accuracy, slower speed
-    segmentationThreshold: 0.7 //Confidence threshold (0 to 1)
+    segmentationThreshold: 0.9 //Confidence threshold (0 to 1)
   });
 
  // 加载字体

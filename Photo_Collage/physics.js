@@ -6,8 +6,8 @@
       // 缩放并移动轮廓点
       const vertices = contour.points.map(p => {
         return {
-          x: startX + (p.x * scaleFactorW * 1.1) - (content.width * scaleFactorW / 2),
-          y: startY + (p.y * scaleFactorH * 1.1) - (content.height * scaleFactorH / 2)
+          x: startX + (p.x * scaleFactorW * 0.9) - (content.width * scaleFactorW / 2),
+          y: startY + (p.y * scaleFactorH * 0.9) - (content.height * scaleFactorH / 2)
         };
       });
       
@@ -169,7 +169,7 @@ function checkCanvasFillLevel() {
     return {
       fillPercentage: fillPercentage,
       crowdedRegions: crowdedRegions,
-      isFull: fillPercentage > 80 || crowdedRegions >= 7 // 自定义"满"的标准
+      isFull: fillPercentage > 70 || crowdedRegions >= 7 // 自定义"满"的标准
     };
   }
 

@@ -4,7 +4,7 @@
 let video;
 let bodySegmentation;
 let segmentation;
-let captureInterval = 5000; // 3 seconds between captures
+let captureInterval = 9000; // 3 seconds between captures
 let lastCaptureTime = 0;
 let personPresent = false;
 let personAbsentFrames = 0; // Counter for consecutive frames with no person

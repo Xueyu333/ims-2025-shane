@@ -14,3 +14,4 @@
 
 ## Final Project
 - [Photo Collage](Photo_Collage)
+- [Blog](https://www.notion.so/xueyuli/WEEK-05-WEEK-06-Final-1df8c08bfd9e80a2aff4e3af8b96aec6)
